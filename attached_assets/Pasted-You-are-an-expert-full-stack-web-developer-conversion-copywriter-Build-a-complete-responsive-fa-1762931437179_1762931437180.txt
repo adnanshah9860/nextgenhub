@@ -1,0 +1,98 @@
+You are an expert full-stack web developer & conversion copywriter. Build a complete, responsive, fast, and funnel-optimized website for "Next Generation Hub" (NGH.in) aimed at Indian small & medium businesses. Focus on conversions, local trust signals, and WhatsApp-first contact.
+
+BUSINESS INFO
+- Name: Next Generation Hub (NGH)
+- Domain: ngh.in
+- Audience: Indian small & medium businesses (local shops, builders, clinics, salons, consultants, local services)
+- Languages: Primary English, sprinkle Hindi microcopy where appropriate for trust (examples provided below)
+- Tone: Professional, approachable, results-driven
+
+GOALS & FUNNEL
+- Capture leads fast (WhatsApp + email)
+- Offer a clear lead magnet (free checklist / free website audit)
+- Use a tripwire: low-cost service (₹999 or ₹1,499) to convert cold leads
+- Move high-intent leads to quote form + call/WhatsApp
+- Track conversions & funnel events (GA4 + simple conversion events)
+
+DESIGN & UX
+- Mobile-first, high-converting landing layout
+- Clean, modern, card-based design with rounded corners and clear CTAs
+- Primary color: #0077FF, Dark: #0b1320, Accent: #F59E0B (or similar warm accent)
+- Font: Poppins or Inter
+- Use TailwindCSS (preferred) or Bootstrap if needed
+- Include micro-animations (AOS or CSS) for section reveals
+- Sticky header with WhatsApp CTA (phone + click-to-chat) and "Get Quote" button
+- Prominent hero with 2 CTAs: "Get Free Website Audit" and "WhatsApp Now"
+
+PAGES / FLOW
+1. Landing/Home (funnel-optimized)
+   - Hero: headline, 1-line value prop, two CTAs
+   - Social proof: client logos, short testimonials, trust badges (GST, company years, sample results)
+   - Lead magnet section: offer free checklist/website audit → email + WhatsApp capture
+   - Services summary: Website, Local SEO, WhatsApp Marketing, Paid Ads, Branding
+   - Pricing snapshot: starting price in INR (example: Website from ₹4,999)
+   - How we work (3-step process)
+   - Case study / results (1-2 short cards)
+   - Clear tripwire offer card (₹999 Website Speed Fix or ₹1499 Landing Page)
+   - CTA banner + FAQ
+2. Services (detail pages for each service with CTA)
+   - Website Development (start-to-finish)
+   - Digital Marketing (local/Google/Meta)
+   - Branding & Logo Design
+   - WhatsApp + Automation
+3. Portfolio (3 example projects with images + results)
+4. Pricing & Packages (Basic, Professional, Premium) — prices in INR, features, revision limits
+5. Contact / Quote (form: Name, Business, City, Phone/WhatsApp, Email, Service, Budget, Message)
+   - Integrate with: Replit DB OR Formspree + Zapier/Integromat OR Google Sheets
+   - After submit → Thank You page with next steps + WhatsApp prompt
+6. Thank You / Tripwire Checkout
+   - Simple checkout for tripwire (Razorpay/UPI link or PayNow placeholder)
+   - On success → send webhook to Zapier to add to CRM & trigger WhatsApp message
+7. Privacy & Terms + Footer (GST number area)
+
+FUNCTIONAL REQUIREMENTS
+- Build as static React (Vite) + Tailwind OR plain static HTML + Tailwind if React not supported
+- Implement contact form (serverless route using Replit web or integrate Formspree)
+- Add click-to-chat WhatsApp floating button with prefilled message
+- Add modal for lead magnet signup
+- Add light/dark toggle (optional)
+- SEO: proper title tags, meta description, Open Graph, structured data for local business
+- Analytics: GA4 snippet (placeholder), conversion event stubs
+- Simple A/B-ready hero variations (text + CTA) — agent should output both variants
+- Accessibility basics (alt tags, labels)
+
+FUNNEL & AUTOMATION (integrations to include sample code / instructions)
+- Lead capture → save to Replit DB / Google Sheet
+- Send new lead to WhatsApp using WhatsApp link + sample Twilio/360dialog webhook code (commented)
+- Trigger email sequence: sample MailerLite / Zoho / SendGrid integration (instructions + webhook)
+- Zapier / Make (Integromat) mapping example for: form → sheet → CRM → WhatsApp message
+
+LOCALIZATION & COPY SUGGESTIONS (use these microcopy snippets)
+- Hero: "Build a professional website for your business — fast, affordable, measurable."
+- Hindi trust line under hero: "छोटे व्यवसायों के लिए वेबसाइट, ब्रांडिंग और डिजिटल ग्राहक लाना।"
+- Lead magnet CTA: "Free Website Audit — 24-hour report" (Hindi small): "मुफ्त वेबसाइट ऑडिट — 24 घंटे में रिपोर्ट"
+- WhatsApp message prefill: "Hi NGH, please send a free audit for my website / I want a quote for a website."
+
+DELIVERABLES (step-by-step from agent)
+1. Create working project with files and runnable dev server
+2. Provide folder structure and explain each file briefly
+3. Provide exact commands to run preview on Replit
+4. Provide instructions to connect domain ngh.in via Cloudflare Pages or Replit deployment (step-by-step)
+5. Provide sample email templates (welcome, tripwire upsell, quote follow-up) and WhatsApp message templates
+6. Provide a short CRO checklist (5–7 items) and suggestions for hero A/B tests
+7. Provide SEO title + meta descriptions for 5 pages and recommended keywords for Indian market (local SEO phrases like "website development for small business India", "WhatsApp marketing for shops", etc.)
+8. Output example GA4 conversion events and sample Zapier mapping
+
+OUTPUT FORMAT
+- First: a working deployable codebase (React or HTML) and clear run instructions
+- Then: marketing copy (5 short headlines), 3 WhatsApp templates, 3 follow-up email templates
+- Then: final checklist to launch & test funnel (lead capture, payment, emails, tracking)
+
+CONSTRAINTS & NOTES
+- Keep initial site lightweight and fast (score >60 mobile target)
+- Use placeholder images (Unsplash) and explain how to replace them
+- Use INR for pricing examples, mention GST where relevant
+- Provide sample text in both English and short Hindi lines where it helps trust
+- Do NOT deploy automatically — provide instructions and confirmation steps for domain mapping
+
+Be thorough: create files, show code, and give step-by-step deployment & funnel activation instructions. When done, provide a short QA checklist so I can test everything quickly.
