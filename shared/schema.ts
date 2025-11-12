@@ -44,5 +44,11 @@ export const insertContactSchema = createInsertSchema(contacts).omit({
 
 export type InsertLead = z.infer<typeof insertLeadSchema>;
 export type Lead = typeof leads.$inferSelect;
+
+// Contact form submissions are also quote requests in this business context
 export type InsertContact = z.infer<typeof insertContactSchema>;
 export type Contact = typeof contacts.$inferSelect;
+
+// Aliases for clarity - quotes ARE contacts in this business model
+export type InsertQuote = InsertContact;
+export type Quote = Contact;

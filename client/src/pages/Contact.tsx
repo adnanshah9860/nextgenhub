@@ -18,6 +18,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import AOS from "aos";
+import { trackConversion } from "@/lib/analytics";
 
 export default function Contact() {
   const [, setLocation] = useLocation();
@@ -53,6 +54,12 @@ export default function Contact() {
         const error = await response.json();
         throw new Error(error.message || "Failed to submit");
       }
+
+      trackConversion('quote_request', undefined, {
+        service: formData.service,
+        budget: formData.budget,
+        city: formData.city,
+      });
 
       toast({
         title: "Success! 🎉",

@@ -133,6 +133,51 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Quote endpoints (aliases to contacts since they're the same in this business model)
+  app.post("/api/quotes", async (req, res) => {
+    // Quotes are handled the same as contacts - just an alias for clarity
+    try {
+      const validatedData = insertContactSchema.parse(req.body);
+      const quote = await storage.createQuote(validatedData);
+      
+      res.status(201).json({
+        success: true,
+        message: "Quote request submitted successfully",
+        data: quote,
+      });
+    } catch (error: any) {
+      if (error.name === "ZodError") {
+        const validationError = fromZodError(error);
+        return res.status(400).json({
+          success: false,
+          message: validationError.message,
+        });
+      }
+      console.error("Error creating quote:", error);
+      res.status(500).json({
+        success: false,
+        message: "Failed to submit quote request. Please try again.",
+      });
+    }
+  });
+
+  app.get("/api/quotes", async (req, res) => {
+    try {
+      const quotes = await storage.getQuotes();
+      res.json({
+        success: true,
+        data: quotes,
+        count: quotes.length,
+      });
+    } catch (error) {
+      console.error("Error fetching quotes:", error);
+      res.status(500).json({
+        success: false,
+        message: "Failed to fetch quotes",
+      });
+    }
+  });
+
   const httpServer = createServer(app);
 
   return httpServer;

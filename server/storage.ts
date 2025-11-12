@@ -1,82 +1,64 @@
 import { 
-  type User, 
-  type InsertUser,
+  leads,
+  contacts,
   type Lead,
   type InsertLead,
   type Contact,
   type InsertContact,
+  type Quote,
+  type InsertQuote,
 } from "@shared/schema";
-import { randomUUID } from "crypto";
+import { db } from "./db";
+import { desc } from "drizzle-orm";
 
 export interface IStorage {
-  getUser(id: string): Promise<User | undefined>;
-  getUserByUsername(username: string): Promise<User | undefined>;
-  createUser(user: InsertUser): Promise<User>;
-  
+  // Lead capture (free audit requests)
   createLead(lead: InsertLead): Promise<Lead>;
   getLeads(): Promise<Lead[]>;
   
+  // Contact/Quote requests (same table, different use case)
   createContact(contact: InsertContact): Promise<Contact>;
   getContacts(): Promise<Contact[]>;
+  
+  // Alias methods for clarity - quotes ARE contacts
+  createQuote(quote: InsertQuote): Promise<Quote>;
+  getQuotes(): Promise<Quote[]>;
 }
 
-export class MemStorage implements IStorage {
-  private users: Map<string, User>;
-  private leads: Map<string, Lead>;
-  private contacts: Map<string, Contact>;
-
-  constructor() {
-    this.users = new Map();
-    this.leads = new Map();
-    this.contacts = new Map();
-  }
-
-  async getUser(id: string): Promise<User | undefined> {
-    return this.users.get(id);
-  }
-
-  async getUserByUsername(username: string): Promise<User | undefined> {
-    return Array.from(this.users.values()).find(
-      (user) => user.username === username,
-    );
-  }
-
-  async createUser(insertUser: InsertUser): Promise<User> {
-    const id = randomUUID();
-    const user: User = { ...insertUser, id };
-    this.users.set(id, user);
-    return user;
-  }
+export class DatabaseStorage implements IStorage {
 
   async createLead(insertLead: InsertLead): Promise<Lead> {
-    const id = randomUUID();
-    const lead: Lead = {
-      ...insertLead,
-      id,
-      createdAt: new Date(),
-    };
-    this.leads.set(id, lead);
+    const [lead] = await db
+      .insert(leads)
+      .values(insertLead)
+      .returning();
     return lead;
   }
 
   async getLeads(): Promise<Lead[]> {
-    return Array.from(this.leads.values());
+    return await db.select().from(leads).orderBy(desc(leads.createdAt));
   }
 
   async createContact(insertContact: InsertContact): Promise<Contact> {
-    const id = randomUUID();
-    const contact: Contact = {
-      ...insertContact,
-      id,
-      createdAt: new Date(),
-    };
-    this.contacts.set(id, contact);
+    const [contact] = await db
+      .insert(contacts)
+      .values(insertContact)
+      .returning();
     return contact;
   }
 
   async getContacts(): Promise<Contact[]> {
-    return Array.from(this.contacts.values());
+    return await db.select().from(contacts).orderBy(desc(contacts.createdAt));
+  }
+
+  // Quote methods are aliases to contact methods since they use the same table
+  async createQuote(quote: InsertQuote): Promise<Quote> {
+    return await this.createContact(quote);
+  }
+
+  async getQuotes(): Promise<Quote[]> {
+    return await this.getContacts();
   }
 }
 
-export const storage = new MemStorage();
+export const storage = new DatabaseStorage();

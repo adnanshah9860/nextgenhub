@@ -12,6 +12,7 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { CheckCircle2, Sparkles } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import { trackConversion } from "@/lib/analytics";
 
 interface LeadMagnetModalProps {
   open: boolean;
@@ -43,6 +44,11 @@ export default function LeadMagnetModal({ open, onOpenChange }: LeadMagnetModalP
         const error = await response.json();
         throw new Error(error.message || "Failed to submit");
       }
+
+      trackConversion('lead_capture', undefined, {
+        source: 'website_audit',
+        lead_type: 'free_audit',
+      });
 
       toast({
         title: "Success! 🎉",
