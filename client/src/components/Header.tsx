@@ -17,7 +17,7 @@ export default function Header() {
     { label: "Contact", path: "/contact" },
   ];
 
-  const whatsappNumber = "919876543210";
+  const whatsappNumber = "918530938774";
   const whatsappMessage = encodeURIComponent("Hi NGH, I want a quote for a website.");
 
   return (
@@ -27,7 +27,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3">
             <img src={logoUrl} alt="Next Generation Hub Logo" className="h-10 w-10" />
             <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              NGH
+              NGH.India
             </span>
           </Link>
 

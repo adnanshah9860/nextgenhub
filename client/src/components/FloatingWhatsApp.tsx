@@ -2,7 +2,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { trackConversion } from "@/lib/analytics";
 
 export default function FloatingWhatsApp() {
-  const whatsappNumber = "919876543210";
+  const whatsappNumber = "918530938774";
   const whatsappMessage = encodeURIComponent(
     "Hi NGH, please send a free audit for my website / I want a quote for a website."
   );

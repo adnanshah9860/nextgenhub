@@ -97,7 +97,7 @@ export default function Contact() {
     "Indore", "Thane", "Bhopal", "Visakhapatnam", "Vadodara", "Other"
   ];
 
-  const whatsappNumber = "919876543210";
+  const whatsappNumber = "918530938774";
 
   return (
     <div className="min-h-screen">
@@ -130,7 +130,7 @@ export default function Contact() {
                   className="text-sm text-primary hover:underline"
                   data-testid="link-contact-whatsapp"
                 >
-                  +91 98765 43210
+                  +91 8530938774
                 </a>
               </CardContent>
             </Card>
@@ -143,11 +143,11 @@ export default function Contact() {
                 <h3 className="font-semibold mb-2">Email</h3>
                 <p className="text-sm text-muted-foreground mb-4">We reply within 24 hours</p>
                 <a
-                  href="mailto:info@ngh.in"
+                  href="mailto:next.gen.hub9@gmail.com"
                   className="text-sm text-primary hover:underline"
                   data-testid="link-contact-email"
                 >
-                  info@ngh.in
+                  next.gen.hub9@gmail.com
                 </a>
               </CardContent>
             </Card>
@@ -181,7 +181,7 @@ export default function Contact() {
                           required
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          placeholder="Rajesh Kumar"
+                          placeholder="e.g Rajesh Kumar"
                           data-testid="input-contact-name"
                         />
                       </div>
@@ -193,7 +193,7 @@ export default function Contact() {
                           required
                           value={formData.business}
                           onChange={(e) => setFormData({ ...formData, business: e.target.value })}
-                          placeholder="Kumar Electronics"
+                          placeholder="e.g Kumar Electronics"
                           data-testid="input-contact-business"
                         />
                       </div>
@@ -223,7 +223,7 @@ export default function Contact() {
                           required
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          placeholder="+91 98765 43210"
+                          placeholder="e.g +91 9999999999"
                           data-testid="input-contact-phone"
                         />
                       </div>
@@ -252,7 +252,7 @@ export default function Contact() {
                           <SelectItem value="website">Website Development</SelectItem>
                           <SelectItem value="marketing">Digital Marketing</SelectItem>
                           <SelectItem value="branding">Branding & Logo Design</SelectItem>
-                          <SelectItem value="whatsapp">WhatsApp Marketing</SelectItem>
+                          <SelectItem value="whatsapp">Social media management</SelectItem>
                           <SelectItem value="ecommerce">E-commerce Development</SelectItem>
                           <SelectItem value="multiple">Multiple Services</SelectItem>
                           <SelectItem value="other">Other</SelectItem>
@@ -270,15 +270,15 @@ export default function Contact() {
                           </div>
                           <div className="flex items-center space-x-2">
                             <RadioGroupItem value="5k-15k" id="5k-15k" data-testid="radio-budget-5k-15k" />
-                            <Label htmlFor="5k-15k" className="font-normal cursor-pointer">₹5,000 - ₹15,000</Label>
+                            <Label htmlFor="5k-15k" className="font-normal cursor-pointer">₹5,000 - ₹20,000</Label>
                           </div>
                           <div className="flex items-center space-x-2">
                             <RadioGroupItem value="15k-30k" id="15k-30k" data-testid="radio-budget-15k-30k" />
-                            <Label htmlFor="15k-30k" className="font-normal cursor-pointer">₹15,000 - ₹30,000</Label>
+                            <Label htmlFor="15k-30k" className="font-normal cursor-pointer">₹30,000 - ₹1,00,000</Label>
                           </div>
                           <div className="flex items-center space-x-2">
                             <RadioGroupItem value="30k-plus" id="30k-plus" data-testid="radio-budget-30k-plus" />
-                            <Label htmlFor="30k-plus" className="font-normal cursor-pointer">₹30,000+</Label>
+                            <Label htmlFor="30k-plus" className="font-normal cursor-pointer">₹1,50,000+</Label>
                           </div>
                         </div>
                       </RadioGroup>
@@ -388,7 +388,7 @@ export default function Contact() {
                       ✓
                     </div>
                     <div>
-                      <h4 className="font-medium mb-1">GST Registered</h4>
+                      <h4 className="font-medium mb-1">International Standard</h4>
                       <p className="text-sm text-muted-foreground">Proper invoicing & compliance</p>
                     </div>
                   </div>
@@ -401,15 +401,15 @@ export default function Contact() {
                   <div className="space-y-3 text-sm text-muted-foreground">
                     <div className="flex items-start gap-2">
                       <MapPin className="h-4 w-4 shrink-0 mt-0.5" />
-                      <span>Mumbai, Maharashtra, India</span>
+                      <span>Paithan Gate, Chh SambhajiNagar, Maharashtra, India</span>
                     </div>
                     <div className="flex items-start gap-2">
                       <Phone className="h-4 w-4 shrink-0 mt-0.5" />
-                      <span>+91 98765 43210</span>
+                      <span>+91 8530938774</span>
                     </div>
                     <div className="flex items-start gap-2">
                       <Mail className="h-4 w-4 shrink-0 mt-0.5" />
-                      <span>info@ngh.in</span>
+                      <span>next.gen.hub9@gmail.com</span>
                     </div>
                   </div>
                 </CardContent>

@@ -25,7 +25,7 @@ export default function Home() {
     });
   }, []);
 
-  const whatsappNumber = "919876543210";
+  const whatsappNumber = "918530938774";
   const whatsappMessage = encodeURIComponent("Hi NGH, I want a quote for a website.");
 
   const services = [
@@ -62,7 +62,7 @@ export default function Home() {
   const pricingTiers = [
     {
       name: "Basic",
-      price: "4,999",
+      price: "19,999",
       best: "New Businesses",
       features: [
         "3-Page Website",
@@ -76,7 +76,7 @@ export default function Home() {
     },
     {
       name: "Professional",
-      price: "12,999",
+      price: "44,999",
       best: "Growing Businesses",
       popular: true,
       features: [
@@ -93,7 +93,7 @@ export default function Home() {
     },
     {
       name: "Premium",
-      price: "24,999",
+      price: "89,999",
       best: "Established Businesses",
       features: [
         "Unlimited Pages",
@@ -158,7 +158,7 @@ export default function Home() {
     },
     {
       q: "Do you provide hosting and domain?",
-      a: "Yes! We help you register your domain and provide hosting recommendations. Professional and Premium packages include free hosting for 1 year.",
+      a: "Yes! We help you register your domain and provide hosting. All packages include free hosting for 1 year.",
     },
     {
       q: "Will my website work on mobile phones?",
@@ -170,7 +170,7 @@ export default function Home() {
     },
     {
       q: "Do you provide support after the website is live?",
-      a: "Yes! All packages include support: Basic (1 month), Professional (3 months), Premium (6 months). Extended support is available.",
+      a: "Yes! All packages include support: Basic (1 month), Professional (3 months), Premium (6 months). Extended support and maintenance is available.",
     },
     {
       q: "What if I need changes after the website is completed?",
@@ -201,7 +201,7 @@ export default function Home() {
             </h1>
             
             <p className="text-xl md:text-2xl mb-4 text-gray-200">
-              छोटे व्यवसायों के लिए वेबसाइट, ब्रांडिंग और डिजिटल ग्राहक लाना।
+              Think Next Go Digital
             </p>
             
             <p className="text-lg mb-8 text-gray-300">
@@ -243,7 +243,7 @@ export default function Home() {
               </div>
               <div className="flex items-center gap-2">
                 <FaCheckCircle className="text-green-400" />
-                <span>GST Registered</span>
+                <span>International Standard</span>
               </div>
             </div>
           </div>
@@ -329,7 +329,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <Badge className="mb-4" data-testid="badge-pricing">Transparent Pricing</Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Plans That Fit Your Budget</h2>
-            <p className="text-lg text-muted-foreground">Starting from ₹4,999 — No hidden charges, GST included</p>
+            <p className="text-lg text-muted-foreground">Starting from ₹19,999 — No hidden charges</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">

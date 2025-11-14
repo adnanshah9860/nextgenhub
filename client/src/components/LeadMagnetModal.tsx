@@ -77,7 +77,7 @@ export default function LeadMagnetModal({ open, onOpenChange }: LeadMagnetModalP
             Get Your Free Website Audit
           </DialogTitle>
           <DialogDescription className="text-base">
-            मुफ्त वेबसाइट ऑडिट — 24 घंटे में रिपोर्ट
+            Free Website Audit — within 1 hour
           </DialogDescription>
         </DialogHeader>
 
@@ -141,18 +141,18 @@ export default function LeadMagnetModal({ open, onOpenChange }: LeadMagnetModalP
                 required
                 value={formData.whatsapp}
                 onChange={(e) => setFormData({ ...formData, whatsapp: e.target.value })}
-                placeholder="+91 98765 43210"
+                placeholder="e.g +91 98xxxxxxxx"
                 data-testid="input-lead-whatsapp"
               />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="lead-website">Current Website (Optional)</Label>
+              <Label htmlFor="lead-website">Current Website</Label>
               <Input
                 id="lead-website"
                 value={formData.website}
                 onChange={(e) => setFormData({ ...formData, website: e.target.value })}
-                placeholder="www.yourwebsite.com"
+                placeholder="e.g www.yourwebsite.com"
                 data-testid="input-lead-website"
               />
             </div>
@@ -174,7 +174,7 @@ export default function LeadMagnetModal({ open, onOpenChange }: LeadMagnetModalP
             </Button>
 
             <p className="text-xs text-center text-muted-foreground">
-              No credit card required. Report delivered in 24 hours.
+              No credit card required. Report delivered in 1 hour.
             </p>
           </form>
         </div>

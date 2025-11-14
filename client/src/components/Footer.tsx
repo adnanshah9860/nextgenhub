@@ -18,7 +18,7 @@ export default function Footer() {
               Empowering Indian SMBs with professional websites, digital marketing, and branding solutions.
             </p>
             <p className="text-sm text-gray-400">
-              छोटे व्यवसायों के लिए वेबसाइट, ब्रांडिंग और डिजिटल ग्राहक लाना।
+            
             </p>
           </div>
 
@@ -48,10 +48,10 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-center gap-2">
                 <FaWhatsapp className="h-4 w-4 text-green-400" />
-                <span>+91 98765 43210</span>
+                <span>+91 8530938774</span>
               </li>
-              <li>info@ngh.in</li>
-              <li className="text-sm pt-2">Mumbai, India</li>
+              <li>next.gen.hub9@gmail.com</li>
+              <li className="text-sm pt-2">Paithan Gate Chh, Sambhajinagar, Maharashtra, India</li>
             </ul>
             <div className="flex gap-4 mt-6">
               <a href="#" className="text-gray-300 hover:text-primary transition-colors" data-testid="link-social-facebook">
@@ -77,7 +77,7 @@ export default function Footer() {
             <div className="flex flex-wrap gap-4 items-center justify-center">
               <span>© {currentYear} Next Generation Hub. All rights reserved.</span>
               <span className="hidden md:inline">|</span>
-              <span>GSTIN: 27XXXXX1234X1ZX</span>
+              <span>Pricing Terms</span>
             </div>
             <div className="flex gap-6">
               <Link href="/privacy" className="hover:text-primary transition-colors" data-testid="link-footer-privacy">
