@@ -8,7 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "check": "tsc",
-    "postbuild": "node scripts/copyRedirects.cjs"
+    "postbuild": "node scripts/postbuild-fixdist.cjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
