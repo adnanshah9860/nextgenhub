@@ -2,8 +2,15 @@
 import express from "express";
 import cors from "cors";
 import path from "path";
+import { fileURLToPath } from "url";    // <-- add this
+
+// create __filename and __dirname in ESM
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 import sendContact from "./sendContact";
 import sendLead from "./sendLead";
+
 
 const app = express();
 const PORT = process.env.PORT ? parseInt(process.env.PORT) : 5000;
