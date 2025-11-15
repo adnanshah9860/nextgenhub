@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import logoUrl from "@assets/next gen hub logo png_1762931456033.png";
+import logoUrl from "@assets/logo white.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,8 +11,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src={logoUrl} alt="Next Generation Hub" className="h-10 w-10" />
-              <span className="text-xl font-bold">NGH</span>
+              <img src={logoUrl} alt="Next Generation Hub" className="h-10 w-15
+              " />
+              <span className="text-xl font-bold"></span>
             </div>
             <p className="text-sm text-gray-300">
               Empowering Indian SMBs with professional websites, digital marketing, and branding solutions.

@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Phone, Menu, X } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-import logoUrl from "@assets/next gen hub logo png_1762931456033.png";
+import logoUrl from "@assets/logooo.png";
 
 export default function Header() {
   const [location] = useLocation();

@@ -34,6 +34,7 @@ export default function LeadMagnetModal({ open, onOpenChange }: LeadMagnetModalP
     setLoading(true);
 
     try {
+      const API = import.meta.env.VITE_API_URL || "";
       const response = await fetch("/api/leads", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

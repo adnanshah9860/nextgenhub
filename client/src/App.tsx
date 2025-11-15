@@ -19,6 +19,10 @@ import NotFound from "@/pages/not-found";
 import { useEffect } from "react";
 import { initGA, trackPageView } from "@/lib/analytics";
 
+// ✅ IMPORTANT: this is where ScrollToTop import stays
+import ScrollToTop from "@/components/ScrollToTop";
+
+
 function Router() {
   const [location] = useLocation();
 
@@ -41,6 +45,10 @@ function Router() {
 
   return (
     <div className="flex flex-col min-h-screen">
+
+      {/* ✅ ADD THIS HERE — FIRST ELEMENT INSIDE ROUTER */}
+      <ScrollToTop />
+
       <StructuredData />
       <Header />
       <main className="flex-1">
